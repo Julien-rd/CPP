@@ -8,6 +8,7 @@ void Weapon::setType(std::string value)
 {
     // delete type;
     type = new std::string(value);
+    // std::cout << *type << std::endl;
 }
 
 Weapon::Weapon(std::string new_type)

@@ -4,16 +4,13 @@
 HumanA::HumanA(std::string new_name, Weapon new_weapon)
     : name(new_name)
 {
-	weapon = new Weapon*;
-	*weapon = new Weapon(new_weapon.getType());
+	weapon = &new_weapon;
 }
 
 HumanA::~HumanA(){
-	delete *weapon;
-	delete weapon;
 	return ;
 }
 void HumanA::attack(void)
 {
-	std::cout << name << " attacks with their " << (*weapon)->getType() << std::endl;
+	std::cout << name << " attacks with their " << weapon->getType() << std::endl;
 }
